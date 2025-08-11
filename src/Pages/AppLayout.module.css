@@ -6,21 +6,21 @@
   position: relative;
 }
 
-/* Mobile adjustments */
-@media (max-width: 768px) {
-  .app-layout {
+/* === Mobile tweaks === */
+@media (max-width: 992px) {
+  .app {
     flex-direction: column;
-    padding: 1rem;
+    padding: 1.2rem;
+    height: auto;
   }
 
-  .app-layout main {
+  .app > * {
     width: 100%;
-    padding: 1rem;
   }
 }
 
 @media (max-width: 480px) {
-  .app-layout {
-    padding: 0.5rem;
+  .app {
+    padding: 0.6rem;
   }
 }

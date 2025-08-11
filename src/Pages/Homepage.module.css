@@ -35,23 +35,41 @@
   /* color: white; */
 }
 
-/* Mobile adjustments */
-@media (max-width: 768px) {
-  .home-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 1rem;
+/* === Mobile tweaks === */
+@media (max-width: 992px) {
+  .homepage {
+    margin: 1rem;
+    padding: 1.5rem;
+    height: auto;
+    box-sizing: border-box;
   }
 
-  .home-container img {
-    max-width: 100%;
+  .homepage section {
     height: auto;
+    padding: 1rem 0;
+  }
+
+  .homepage h1 {
+    font-size: 3.2rem;
+    line-height: 1.25;
+  }
+
+  .homepage h2 {
+    width: 100%;
+    font-size: 1.6rem;
   }
 }
 
 @media (max-width: 480px) {
-  .home-container {
-    padding: 0.5rem;
+  .homepage {
+    padding: 1rem 0.8rem;
+  }
+
+  .homepage h1 {
+    font-size: 2.6rem;
+  }
+
+  .homepage h2 {
+    font-size: 1.4rem;
   }
 }

@@ -25,43 +25,32 @@
   gap: 0.5rem;
 }
 
-/* Mobile adjustments */
-@media (max-width: 768px) {
-  .signup-container {
-    width: 100%;
-    max-width: 100%;
+/* === Mobile tweaks === */
+@media (max-width: 992px) {
+  .signup {
+    margin: 1rem;
     padding: 1.5rem;
-    margin: 0 auto;
-    box-sizing: border-box;
+    min-height: auto;
   }
 
-  .signup-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .signup-form input,
-  .signup-form button {
+  .form {
     width: 100%;
-    font-size: 1.4rem;
-    padding: 0.8rem 1rem;
+    max-width: 48rem;
+    margin: 2rem auto;
+    padding: 1rem;
     box-sizing: border-box;
-  }
-
-  .signup-title {
-    font-size: 1.8rem;
-    text-align: center;
   }
 }
 
 @media (max-width: 480px) {
-  .signup-title {
-    font-size: 1.6rem;
+  .signup {
+    margin: 0.6rem;
+    padding: 0.8rem;
   }
 
-  .signup-form input,
-  .signup-form button {
-    font-size: 1.2rem;
+  .form input,
+  .form textarea,
+  .form button {
+    font-size: 1.4rem;
   }
 }

@@ -33,22 +33,32 @@
   margin-top: 2rem;
 }
 
-/* Mobile adjustments */
-@media (max-width: 768px) {
-  .pricing-container {
-    flex-direction: column;
-    padding: 1rem;
-    text-align: center;
+/* === Mobile tweaks === */
+@media (max-width: 992px) {
+  .pricing {
+    margin: 1rem;
+    padding: 1.5rem;
+    min-height: auto;
   }
 
-  .pricing-card {
+  .pricing section {
+    display: block;
     width: 100%;
-    margin-bottom: 1rem;
+    margin: 2rem auto;
+    gap: 2rem;
+  }
+
+  .pricing h2 {
+    font-size: 2.8rem;
   }
 }
 
 @media (max-width: 480px) {
-  .pricing-container {
-    padding: 0.5rem;
+  .pricing {
+    padding: 0.8rem;
+  }
+
+  .pricing h2 {
+    font-size: 2.2rem;
   }
 }
