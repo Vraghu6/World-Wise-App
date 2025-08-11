@@ -2,7 +2,6 @@
 @import "https://unpkg.com/leaflet@1.7.1/dist/leaflet.css";
 @import "https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap";
 
-/* These CSS variables are global, so they are available in all CSS modules */
 :root {
   --color-brand--1: #ffb545;
   --color-brand--2: #00c46a;
@@ -68,14 +67,14 @@ input:focus {
   border-radius: 5px;
 }
 
-html {
-  font-size: 62.5%;
-  box-sizing: border-box;
-}
-
+/* Responsive Styles */
 @media (max-width: 768px) {
   html {
     font-size: 55%;
+  }
+
+  body {
+    padding: 1rem;
   }
 
   .cta:link,
@@ -84,14 +83,14 @@ html {
     padding: 0.8rem 2rem;
   }
 
-  body {
-    padding: 1rem;
-    text-align: center;
-  }
-
   img {
     max-width: 100%;
     height: auto;
+  }
+
+  input,
+  textarea {
+    font-size: 1.4rem;
   }
 }
 
@@ -99,12 +98,14 @@ html {
   html {
     font-size: 50%;
   }
+
+  body {
+    padding: 0.5rem;
+  }
+
+  .cta:link,
+  .cta:visited {
+    font-size: 1.2rem;
+    padding: 0.6rem 1.5rem;
+  }
 }
-/*
-"importCSSModule": {
-    "prefix": "csm",
-    "scope": "javascript,typescript,javascriptreact",
-    "body": ["import styles from './${TM_FILENAME_BASE}.module.css'"],
-    "description": "Import CSS Module as `styles`"
-  },
-*/
