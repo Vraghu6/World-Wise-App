@@ -1,0 +1,27 @@
+import styles from "./CountryList.module.css";
+import CountryItem from "./CountryItem";
+import Spinner from "./Spinner";
+import { useCities } from "../Contexts/CitiesContext";
+
+function CountryList() {
+  const { cities, isLoading } = useCities();
+  // console.log("isLoading:", isLoading);
+  // console.log("cities:", cities);
+  if (isLoading || !cities) return <Spinner />;
+  // console.log(cities);
+  const countries = cities.reduce((arr, city) => {
+    if (!arr.map((el) => el.country).includes(city.country))
+      return [...arr, { country: city.country, emoji: city.emoji }];
+    else return arr;
+  }, []);
+  // console.log(countries);
+  return (
+    <ul className={styles.countryList}>
+      {countries.map((country) => (
+        <CountryItem country={country} key={country.country} />
+      ))}
+    </ul>
+  );
+}
+
+export default CountryList;
