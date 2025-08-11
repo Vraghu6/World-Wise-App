@@ -5,3 +5,22 @@
   display: flex;
   position: relative;
 }
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .app-layout {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .app-layout main {
+    width: 100%;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-layout {
+    padding: 0.5rem;
+  }
+}

@@ -32,3 +32,23 @@
 .pricing section a {
   margin-top: 2rem;
 }
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .pricing-container {
+    flex-direction: column;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .pricing-card {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .pricing-container {
+    padding: 0.5rem;
+  }
+}

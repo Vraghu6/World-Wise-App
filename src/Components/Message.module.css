@@ -5,3 +5,45 @@
   margin: 2rem auto;
   font-weight: 600;
 }
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .message {
+    font-size: 1.4rem;
+    padding: 1rem;
+    text-align: center;
+    word-wrap: break-word;
+  }
+}
+
+@media (max-width: 480px) {
+  .message {
+    font-size: 1.2rem;
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .user-profile {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .user-profile img {
+    max-width: 120px;
+    height: auto;
+    border-radius: 50%;
+  }
+
+  .user-info {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .user-info {
+    font-size: 1.2rem;
+  }
+}

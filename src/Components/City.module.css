@@ -45,3 +45,41 @@
   font-size: 1.6rem;
   color: var(--color-brand--1);
 }
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .city {
+    padding: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .city-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .city-header img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .city h2 {
+    font-size: 1.6rem;
+  }
+
+  .city p {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .city h2 {
+    font-size: 1.4rem;
+  }
+
+  .city p {
+    font-size: 1.2rem;
+  }
+}
