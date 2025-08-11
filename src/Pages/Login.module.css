@@ -30,7 +30,7 @@
   .login {
     margin: 1rem;
     padding: 1.5rem;
-    min-height: auto;
+    height: auto;
   }
 
   .form {
