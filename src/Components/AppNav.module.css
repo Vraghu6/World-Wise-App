@@ -7,7 +7,7 @@
   list-style: none;
   display: flex;
   background-color: var(--color-dark--2);
-  border-radius: 50px;
+  border-radius: 7px;
 }
 
 .nav a:link,
@@ -26,5 +26,3 @@
 .nav a:global(.active) {
   background-color: var(--color-dark--0);
 }
-
-/* Existing desktop styles remain unchanged above this line */
