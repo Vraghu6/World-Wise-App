@@ -24,33 +24,3 @@
   flex-direction: column;
   gap: 0.5rem;
 }
-
-/* === Mobile tweaks === */
-@media (max-width: 992px) {
-  .signup {
-    margin: 1rem;
-    padding: 1.5rem;
-    min-height: auto;
-  }
-
-  .form {
-    width: 100%;
-    max-width: 48rem;
-    margin: 2rem auto;
-    padding: 1rem;
-    box-sizing: border-box;
-  }
-}
-
-@media (max-width: 480px) {
-  .signup {
-    margin: 0.6rem;
-    padding: 0.8rem;
-  }
-
-  .form input,
-  .form textarea,
-  .form button {
-    font-size: 1.4rem;
-  }
-}

@@ -32,33 +32,3 @@
 .product section a {
   margin-top: 2rem;
 }
-
-/* === Mobile tweaks === */
-@media (max-width: 992px) {
-  .product {
-    margin: 1rem;
-    padding: 1.5rem;
-    min-height: auto;
-  }
-
-  .product section {
-    display: block;
-    width: 100%;
-    margin: 2rem auto;
-    gap: 2rem;
-  }
-
-  .product h2 {
-    font-size: 2.8rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .product {
-    padding: 0.8rem;
-  }
-
-  .product h2 {
-    font-size: 2.2rem;
-  }
-}

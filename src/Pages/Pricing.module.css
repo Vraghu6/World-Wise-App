@@ -32,33 +32,3 @@
 .pricing section a {
   margin-top: 2rem;
 }
-
-/* === Mobile tweaks === */
-@media (max-width: 992px) {
-  .pricing {
-    margin: 1rem;
-    padding: 1.5rem;
-    min-height: auto;
-  }
-
-  .pricing section {
-    display: block;
-    width: 100%;
-    margin: 2rem auto;
-    gap: 2rem;
-  }
-
-  .pricing h2 {
-    font-size: 2.8rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .pricing {
-    padding: 0.8rem;
-  }
-
-  .pricing h2 {
-    font-size: 2.2rem;
-  }
-}
