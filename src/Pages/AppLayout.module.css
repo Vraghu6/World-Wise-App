@@ -5,22 +5,3 @@
   display: flex;
   position: relative;
 }
-
-/* === Mobile tweaks === */
-@media (max-width: 992px) {
-  .app {
-    flex-direction: column;
-    padding: 1.2rem;
-    height: auto;
-  }
-
-  .app > * {
-    width: 100%;
-  }
-}
-
-@media (max-width: 480px) {
-  .app {
-    padding: 0.6rem;
-  }
-}
