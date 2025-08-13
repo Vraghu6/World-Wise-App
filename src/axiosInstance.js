@@ -1,7 +1,8 @@
 import axios from "axios";
 
 const instance = axios.create({
-  baseURL: "http://localhost:8080",
+  baseURL:
+    "http://worldwiseapp-env.eba-iav3hwxm.us-east-2.elasticbeanstalk.com",
   headers: {
     "Content-Type": "application/json",
   },
