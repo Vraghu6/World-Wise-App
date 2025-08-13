@@ -8,8 +8,7 @@ import {
 
 const CitiesContext = createContext();
 // const Base_URL = "http://localhost:8080";
-const Base_URL =
-  "http://worldwiseapp-env.eba-iav3hwxm.us-east-2.elasticbeanstalk.com";
+const Base_URL = "";
 
 console.log(Base_URL);
 
