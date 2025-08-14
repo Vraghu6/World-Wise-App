@@ -158,6 +158,32 @@ function CitiesProvider({ children }) {
     }
   }
 
+  async function getCity(id) {
+    if (!user?.token) {
+      dispatch({ type: "rejected", payload: "User not authenticated" });
+      return;
+    }
+
+    dispatch({ type: "loading" });
+    try {
+      const token = user.token;
+      const res = await fetch(
+        `${Base_URL}/api/cities/${id}?email=${user.email}`,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+            "Content-Type": "application/json",
+          },
+        }
+      );
+      if (!res.ok) throw new Error(`Failed to load city: ${res.status}`);
+      const city = await res.json();
+      dispatch({ type: "city/loaded", payload: city });
+    } catch (err) {
+      dispatch({ type: "rejected", payload: err.message });
+    }
+  }
+
   // Expose cities and dispatchers; if needed add getCity, createCity, deleteCity here too
   return (
     <CitiesContext.Provider
@@ -171,6 +197,7 @@ function CitiesProvider({ children }) {
         dispatch,
         createCity,
         deleteCity,
+        getCity,
       }}
     >
       {children}
