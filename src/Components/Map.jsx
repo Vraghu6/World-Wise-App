@@ -57,7 +57,8 @@ function Map() {
           url="https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png"
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         />
-        {cities.map((cities) => (
+        {cities.map((cities) => {
+          if (!cities?.position?.lat || !cities?.position?.lng) return null;
           <Marker
             position={[cities.position.lat, cities.position.lng]}
             key={cities.id}
@@ -66,8 +67,8 @@ function Map() {
               <span>{cities.emoji}</span>
               <span>{cities.cityName}</span>
             </Popup>
-          </Marker>
-        ))}
+          </Marker>;
+        })}
         <Changecenter position={mapPosition} />
         <DetectClick />
       </MapContainer>
