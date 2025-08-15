@@ -20,13 +20,13 @@ export default function Login() {
         email,
         password,
       });
-      console.log(response);
+      // console.log(response);
       const { token, user } = response.data;
       // console.log(user);
       const userWithToken = { ...user, token };
       localStorage.setItem("user", JSON.stringify(userWithToken));
       // localStorage.setItem("token", token);
-      console.log(token);
+      // console.log(token);
       setUser(userWithToken);
       navigate("/app");
     } catch (err) {

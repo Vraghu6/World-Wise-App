@@ -59,7 +59,7 @@ function CitiesProvider({ children }) {
     }
   });
 
-  console.log(user);
+  // console.log(user);
   const [{ cities, isLoading, currentCity, error }, dispatch] = useReducer(
     reducer,
     initial_state
@@ -90,7 +90,7 @@ function CitiesProvider({ children }) {
       dispatch({ type: "loading" });
       try {
         const token = user?.token;
-        console.log("JWT token sent:", token);
+        // console.log("JWT token sent:", token);
 
         const res = await fetch(`${Base_URL}/api/cities?email=${user.email}`, {
           headers: {
@@ -98,11 +98,11 @@ function CitiesProvider({ children }) {
             "Content-Type": "application/json",
           },
         });
-        console.log("Response status:", res.status);
+        // console.log("Response status:", res.status);
 
         if (!res.ok) throw new Error(`Error: ${res.status}`);
         const data = await res.json();
-        console.log(data);
+        // console.log(data);
         dispatch({ type: "cities/loaded", payload: data });
       } catch (err) {
         dispatch({ type: "rejected", payload: err.message });
