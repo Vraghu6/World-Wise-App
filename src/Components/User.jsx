@@ -9,7 +9,7 @@ function User() {
   const avatar = "https://i.pravatar.cc/100?u=zz";
 
   const user = JSON.parse(localStorage.getItem("user"));
-  console.log(user);
+  // console.log(user);
 
   function handleLogout() {
     // logout(); // fakeAuth logout
