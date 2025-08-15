@@ -5,7 +5,6 @@ import {
   useReducer,
   useState,
 } from "react";
-import { useNavigate } from "react-router-dom";
 
 const CitiesContext = createContext();
 // const Base_URL = "http://localhost:8080";
@@ -50,7 +49,6 @@ function reducer(state, action) {
 }
 
 function CitiesProvider({ children }) {
-  const navigate = useNavigate();
   // User loaded once from localStorage on mount
   const [user, setUser] = useState(() => {
     try {
@@ -79,12 +77,6 @@ function CitiesProvider({ children }) {
     window.addEventListener("storage", onStorageChange);
     return () => window.removeEventListener("storage", onStorageChange);
   }, []);
-
-  useEffect(() => {
-    if (!user) {
-      navigate("/");
-    }
-  }, [user, navigate]);
 
   // Whenever user changes (login/logout), fetch cities
   useEffect(() => {
