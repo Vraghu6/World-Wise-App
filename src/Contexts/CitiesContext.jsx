@@ -10,9 +10,8 @@ import {
 const CitiesContext = createContext();
 // const Base_URL = "http://localhost:8080";
 const Base_URL =
-  import.meta.env.MODE === "production"
-    ? "http://worldwiseapp-env.eba-iav3hwxm.us-east-2.elasticbeanstalk.com"
-    : "http://localhost:8080";
+  import.meta.env.MODE === "production" ? "/api" : "http://localhost:8080";
+
 console.log(Base_URL);
 
 const initial_state = {
