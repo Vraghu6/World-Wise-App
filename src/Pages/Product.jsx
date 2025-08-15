@@ -13,15 +13,25 @@ function Product() {
         <div>
           <h2>About WorldWide.</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo est
-            dicta illum vero culpa cum quaerat architecto sapiente eius non
-            soluta, molestiae nihil laborum, placeat debitis, laboriosam at fuga
-            perspiciatis?
+            Worldwise is a morden travel companion that helps you track of every
+            city you visit around the globe. It stores your journey, notes and
+            memorable details while placing them on an interactive map.Whether
+            you're frequent traveller, a digital nomad, or just love exploring,
+            WorldWise makes your adventures easy to revisit and share. With a
+            simple and intuitive interface, you can record the places you've
+            been highlight experiences and plan the next destination all in one
+            place.
           </p>
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis
-            doloribus libero sunt expedita ratione iusto, magni, id sapiente
-            sequi officiis et.
+            WorldWise es un compañero de viaje moderno que te ayuda a llevar un
+            registro de cada ciudad que visitas en todo el mundo. Guarda tus
+            viajes, notas y recuerdos más especiales, colocándolos en un mapa
+            mundial interactivo. Ya seas un viajero frecuente, un nómada digital
+            o simplemente alguien que ama explorar, WorldWise hace que tus
+            aventuras sean fáciles de revivir y compartir. Con una interfaz
+            sencilla e intuitiva, puedes registrar los lugares que has visitado,
+            resaltar experiencias y planificar tu próximo destino, todo en un
+            solo lugar.
           </p>
         </div>
       </section>
