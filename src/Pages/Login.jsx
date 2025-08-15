@@ -1,6 +1,5 @@
 import { useNavigate } from "react-router-dom";
 import PageNav from "../Components/PageNav";
-import { useAuth } from "../Contexts/FakeAuth";
 import styles from "./Login.module.css";
 import { useEffect, useState } from "react";
 import Button from "../Components/Button";
@@ -9,7 +8,6 @@ import { useCities } from "../Contexts/CitiesContext"; // import useCities
 
 export default function Login() {
   const { setUser } = useCities();
-  const { isAuthenticated } = useAuth();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -39,8 +37,9 @@ export default function Login() {
   };
 
   useEffect(() => {
-    if (isAuthenticated) navigate("/app", { replace: true });
-  }, [isAuthenticated, navigate]);
+    const storedUser = localStorage.getItem("user");
+    if (storedUser) navigate("/app", { replace: true });
+  }, [navigate]);
 
   return (
     <main className={styles.login}>
