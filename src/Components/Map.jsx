@@ -59,15 +59,17 @@ function Map() {
         />
         {cities.map((cities) => {
           if (!cities?.position?.lat || !cities?.position?.lng) return null;
-          <Marker
-            position={[cities.position.lat, cities.position.lng]}
-            key={cities.id}
-          >
-            <Popup>
-              <span>{cities.emoji}</span>
-              <span>{cities.cityName}</span>
-            </Popup>
-          </Marker>;
+          return (
+            <Marker
+              position={[cities.position.lat, cities.position.lng]}
+              key={cities.id}
+            >
+              <Popup>
+                <span>{cities.emoji}</span>
+                <span>{cities.cityName}</span>
+              </Popup>
+            </Marker>
+          );
         })}
         <Changecenter position={mapPosition} />
         <DetectClick />
