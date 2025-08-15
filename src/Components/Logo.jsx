@@ -6,7 +6,9 @@ function Logo() {
   const { user } = useCities();
 
   if (user) {
-    <img src="/logo.webp" alt="WorldWise Logo" className={styles.logo} />;
+    return (
+      <img src="/logo.webp" alt="WorldWise Logo" className={styles.logo} />
+    );
   }
   return (
     <Link to="/">
