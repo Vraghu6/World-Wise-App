@@ -1,2 +1,2 @@
-/api/*  http://worldwiseapp-env.eba-iav3hwxm.us-east-2.elasticbeanstalk.com/:splat  200
+/api/*  http://worldwiseapp-env.eba-iav3hwxm.us-east-2.elasticbeanstalk.com/api/:splat  200
 /*        /index.html   200
