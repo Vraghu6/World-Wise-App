@@ -4,6 +4,7 @@ import {
   useEffect,
   useReducer,
   useState,
+  useCallback,
 } from "react";
 
 const CitiesContext = createContext();
@@ -158,6 +159,37 @@ function CitiesProvider({ children }) {
     }
   }
 
+  // eslint-disable-next-line no-undef
+  const getCity = useCallback(
+    async function getCity(id) {
+      if (Number(id) === currentCity?.id) return;
+
+      dispatch({ type: "loading" });
+
+      try {
+        const token = user?.token;
+        const res = await fetch(
+          `${Base_URL}/api/cities/${id}?email=${user.email}`,
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+              "Content-Type": "application/json",
+            },
+          }
+        );
+        if (!res.ok) throw new Error(`Failed to fetch city: ${res.status}`);
+        const data = await res.json();
+        dispatch({ type: "city/loaded", payload: data });
+      } catch (err) {
+        dispatch({
+          type: "rejected",
+          payload: err.message || "There was an error loading the city...",
+        });
+      }
+    },
+    [currentCity?.id, Base_URL, user]
+  );
+
   // Expose cities and dispatchers; if needed add getCity, createCity, deleteCity here too
   return (
     <CitiesContext.Provider
@@ -171,6 +203,7 @@ function CitiesProvider({ children }) {
         dispatch,
         createCity,
         deleteCity,
+        getCity,
       }}
     >
       {children}
